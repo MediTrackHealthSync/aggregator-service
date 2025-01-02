@@ -1,33 +1,21 @@
 package com.healthsync.aggregator_service.service;
 
-/**
- * Service interface for managing the aggregation and saving process
- * from MongoDB to Redshift for various tables.
- */
+import java.sql.Connection;
+
 public interface AggregatorService {
 
-    /**
-     * Aggregates and saves data for the `doctor_workload` table.
-     */
-    void saveDoctorWorkload();
+    // Method for saving the doctor workload
+    void saveDoctorWorkload(Connection redshiftConnection);
 
-    /**
-     * Aggregates and saves data for the `appointment_frequency` table.
-     */
-    void saveAppointmentFrequency();
+    // Method for saving appointment frequency
+    void saveAppointmentFrequency(Connection redshiftConnection);
 
-    /**
-     * Aggregates and saves data for the `patient_prescriptions` table.
-     */
-    void savePatientPrescriptions();
+    // Method for saving patient prescriptions
+    void savePatientPrescriptions(Connection redshiftConnection);
 
-    /**
-     * Aggregates and saves data for the `patient_appointments` table.
-     */
-    void savePatientAppointments();
+    // Method for saving common lab tests
+    void saveCommonLabTests(Connection redshiftConnection);
 
-    /**
-     * Aggregates and saves data for the `common_lab_tests` table.
-     */
-    void saveCommonLabTests();
+    // Method for saving patient appointments
+    void savePatientAppointments(Connection redshiftConnection);
 }
