@@ -1,24 +1,33 @@
 package com.healthsync.aggregator_service.service;
 
-import org.springframework.stereotype.Service;
-
-import java.sql.Connection;
-
-@Service
+/**
+ * Service interface for managing the aggregation and saving process
+ * from MongoDB to Redshift for various tables.
+ */
 public interface AggregatorService {
 
-    // Method for saving the doctor workload
+    /**
+     * Aggregates and saves data for the `doctor_workload` table.
+     */
     void saveDoctorWorkload();
 
-    // Method for saving appointment frequency
+    /**
+     * Aggregates and saves data for the `appointment_frequency` table.
+     */
     void saveAppointmentFrequency();
 
-    // Method for saving patient prescriptions
+    /**
+     * Aggregates and saves data for the `patient_prescriptions` table.
+     */
     void savePatientPrescriptions();
 
-    // Method for saving common lab tests
-    void saveCommonLabTests();
-
-    // Method for saving patient appointments
+    /**
+     * Aggregates and saves data for the `patient_appointments` table.
+     */
     void savePatientAppointments();
+
+    /**
+     * Aggregates and saves data for the `common_lab_tests` table.
+     */
+    void saveCommonLabTests();
 }
