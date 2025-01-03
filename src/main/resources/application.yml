@@ -2,9 +2,3 @@ server:
   port: 8080
   servlet:
     context-path: /api/v1/aggregator-service
-
-spring:
-  data:
-    mongodb:
-      uri: mongodb+srv://diwyangivithana1:VALAXwmzmbIrzf1f@health-sync.n81nt.mongodb.net/health_sync_db
-      database: health_sync_db
