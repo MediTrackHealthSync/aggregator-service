@@ -68,4 +68,4 @@ jobs:
       - name: Deployment Integration Tests
         run: |
           echo "Running Service Health Check Test..."
-          curl --fail http://34.49.105.35/api/v1/patient-record-service/actuator/health || exit 1
+          curl --fail http://34.49.105.35/api/v1/aggregator-service/actuator/health || exit 1
