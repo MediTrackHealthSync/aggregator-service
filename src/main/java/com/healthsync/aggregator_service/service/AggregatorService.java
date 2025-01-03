@@ -5,17 +5,17 @@ import java.sql.Connection;
 public interface AggregatorService {
 
     // Method for saving the doctor workload
-    void saveDoctorWorkload(Connection redshiftConnection);
+    void saveDoctorWorkload();
 
     // Method for saving appointment frequency
-    void saveAppointmentFrequency(Connection redshiftConnection);
+    void saveAppointmentFrequency();
 
     // Method for saving patient prescriptions
-    void savePatientPrescriptions(Connection redshiftConnection);
+    void savePatientPrescriptions();
 
     // Method for saving common lab tests
-    void saveCommonLabTests(Connection redshiftConnection);
+    void saveCommonLabTests();
 
     // Method for saving patient appointments
-    void savePatientAppointments(Connection redshiftConnection);
+    void savePatientAppointments();
 }
